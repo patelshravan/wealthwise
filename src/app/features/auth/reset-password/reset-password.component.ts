@@ -6,8 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
-import { ToastService } from '../../utils/toast.service';
+import { AuthService } from '../../../services/auth.service';
+import { ToastService } from '../../../utils/toast.service';
 
 @Component({
   selector: 'app-reset-password',

@@ -1,0 +1,29 @@
+<div class="sidebar" [class.collapsed]="collapsed">
+    <div class="logo">
+        <img src="assets/logo.png" />
+        <span *ngIf="!collapsed">WealthWise</span>
+    </div>
+
+    <nav>
+        <a routerLink="/dashboard" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+            <mat-icon>dashboard</mat-icon>
+            <span *ngIf="!collapsed">Dashboard</span>
+        </a>
+        <a routerLink="/investments" routerLinkActive="active-link">
+            <mat-icon>trending_up</mat-icon>
+            <span *ngIf="!collapsed">Investments</span>
+        </a>
+        <a routerLink="/expenses" routerLinkActive="active-link">
+            <mat-icon>trending_down</mat-icon>
+            <span *ngIf="!collapsed">Expenses</span>
+        </a>
+        <a routerLink="/savings" routerLinkActive="active-link">
+            <mat-icon>savings</mat-icon>
+            <span *ngIf="!collapsed">Savings</span>
+        </a>
+        <a routerLink="/policies" routerLinkActive="active-link">
+            <mat-icon>policy</mat-icon>
+            <span *ngIf="!collapsed">LIC Policies</span>
+        </a>
+    </nav>
+</div>

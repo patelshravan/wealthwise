@@ -1,32 +1,27 @@
 .dashboard-wrapper {
-    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
 
     .welcome-message {
-        font-size: 26px;
-        font-weight: 600;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
+    }
+
+    mat-grid-list {
+        width: 100%;
     }
 
     .summary-card {
-        padding: 16px;
         text-align: center;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        background-color: #ffffff;
+        padding: 12px;
 
         h3 {
-            margin: 10px 0 4px;
-            font-weight: 500;
-        }
-
-        p {
-            font-size: 20px;
-            color: #4caf50;
-            font-weight: 600;
+            margin: 8px 0;
         }
 
         .summary-icon {
-            font-size: 32px;
+            font-size: 40px;
             color: #3f51b5;
         }
     }

@@ -1,0 +1,27 @@
+<div class="policy-form-wrapper">
+    <h2>{{ editingId ? 'Edit Policy' : 'Add Policy' }}</h2>
+
+    <div *ngIf="loading">
+        <p>Loading policy...</p>
+    </div>
+
+    <form *ngIf="!loading" [formGroup]="policyForm" (ngSubmit)="submit()">
+        <label>Policy Number:</label>
+        <input formControlName="policyNumber" type="text" />
+
+        <label>Policy Name:</label>
+        <input formControlName="policyName" type="text" />
+
+        <label>Premium Amount:</label>
+        <input formControlName="premiumAmount" type="number" />
+
+        <label>Due Date:</label>
+        <input formControlName="dueDate" type="date" />
+
+        <label>Maturity Date:</label>
+        <input formControlName="maturityDate" type="date" />
+
+        <button type="submit">{{ editingId ? 'Update' : 'Add' }}</button>
+        <button type="button" (click)="cancel()">Cancel</button>
+    </form>
+</div>

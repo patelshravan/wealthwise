@@ -1,0 +1,27 @@
+<div class="investment-form-wrapper">
+    <h2>{{ editingId ? 'Edit Investment' : 'Add Investment' }}</h2>
+
+    <div *ngIf="loading">
+        <p>Loading investment...</p>
+    </div>
+
+    <form *ngIf="!loading" [formGroup]="investmentForm" (ngSubmit)="submit()">
+        <label>Type:</label>
+        <input formControlName="type" type="text" />
+
+        <label>Name:</label>
+        <input formControlName="name" type="text" />
+
+        <label>Amount Invested:</label>
+        <input formControlName="amountInvested" type="number" />
+
+        <label>Current Value:</label>
+        <input formControlName="currentValue" type="number" />
+
+        <label>Start Date:</label>
+        <input formControlName="startDate" type="date" />
+
+        <button type="submit">{{ editingId ? 'Update' : 'Add' }}</button>
+        <button type="button" (click)="cancel()">Cancel</button>
+    </form>
+</div>

@@ -1,0 +1,38 @@
+<div class="header">
+    <h2>Investments</h2>
+    <button (click)="goToAdd()">Add Investment</button>
+</div>
+
+<table *ngIf="investments.length > 0">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <th>User Email</th>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Current Value</th>
+            <th>Start Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let inv of investments; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ inv.userId?.name }}</td>
+            <td>{{ inv.userId?.email}}</td>
+            <td>{{ inv.type }}</td>
+            <td>{{ inv.name }}</td>
+            <td>{{ inv.amountInvested }}</td>
+            <td>{{ inv.currentValue }}</td>
+            <td>{{ inv.startDate | date }}</td>
+            <td>
+                <button (click)="edit(inv._id)">Edit</button>
+                <button (click)="delete(inv._id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p *ngIf="investments.length === 0">No investments found.</p>

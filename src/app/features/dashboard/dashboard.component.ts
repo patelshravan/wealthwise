@@ -19,9 +19,9 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
-  username: string = 'Shravan';
   balance: number = 15240.75;
   investments = 9050.5;
+  expenses = 22222.5;
   savings = 5000.25;
   lic = 1190.0;
 
@@ -32,6 +32,7 @@ export class DashboardComponent {
       value: this.balance,
     },
     { title: 'Investments', icon: 'trending_up', value: this.investments },
+    { title: 'Expenses', icon: 'trending_up', value: this.expenses },
     { title: 'Savings', icon: 'savings', value: this.savings },
     { title: 'LIC Policies', icon: 'policy', value: this.lic },
   ];

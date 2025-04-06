@@ -1,0 +1,21 @@
+<div class="expense-form-wrapper">
+    <h2>{{ editingId ? 'Edit Expense' : 'Add Expense' }}</h2>
+
+    <div *ngIf="loading">
+        <p>Loading expense...</p>
+    </div>
+
+    <form *ngIf="!loading" [formGroup]="expensesForm" (ngSubmit)="submit()">
+        <label>Amount:</label>
+        <input formControlName="amount" type="text" />
+
+        <label>Category:</label>
+        <input formControlName="category" type="text" />
+
+        <label>Note:</label>
+        <input formControlName="note" type="text" />
+
+        <button type="submit">{{ editingId ? 'Update' : 'Add' }}</button>
+        <button type="button" (click)="cancel()">Cancel</button>
+    </form>
+</div>
