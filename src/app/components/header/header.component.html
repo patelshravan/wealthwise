@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="header-toolbar">
+    <span class="app-logo" routerLink="/">
+        <img src="assets/logo.png" alt="WealthWise" class="logo-image" />
+        <span class="logo-text">WealthWise</span>
+    </span>
+
+    <span class="spacer"></span>
+
+    <a mat-button routerLink="/dashboard">Dashboard</a>
+    <button mat-icon-button (click)="logout()" matTooltip="Logout">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

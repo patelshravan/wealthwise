@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Force remove ALL unwanted background from snackbar overlay */
+.cdk-overlay-container,
+.cdk-overlay-pane,
+.mat-snack-bar-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* OPTIONAL: Center and add space at top */
+.mat-snack-bar-container {
+    margin-top: 16px !important;
+}
+
+/* Force Material dark-theme default override */
+.mat-mdc-snack-bar-container {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* If Angular 16+ is using MDC-based snackbars */
+.mdc-snackbar__surface {
+    background: transparent !important;
+    box-shadow: none !important;
+}

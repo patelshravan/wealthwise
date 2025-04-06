@@ -1,0 +1,43 @@
+.header-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .app-logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .logo-image {
+        height:64px;
+        width: auto;
+        margin-right: 8px;
+    }
+
+    .logo-text {
+        font-weight: 600;
+        font-size: 18px;
+        color: #2c3e50; // dark grey/blue for contrast
+    }
+
+    .spacer {
+        flex: 1 1 auto;
+    }
+
+    a {
+        font-weight: 500;
+        color: #2c3e50;
+        margin-right: 16px;
+    }
+
+    button {
+        color: #2c3e50;
+    }
+}
+
+mat-toolbar {
+    background-color: #f4f6f9;
+    color: #2c3e50;
+}

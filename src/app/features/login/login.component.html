@@ -1,0 +1,35 @@
+<div class="login-container" [formGroup]="loginForm">
+    <mat-card class="login-card">
+        <h2>Welcome Back{{ userName ? ', ' + userName : '' }}</h2>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Enter your email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password"
+                placeholder="Enter your password" />
+            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+                [attr.aria-label]="'Toggle password visibility'" [attr.aria-pressed]="!hidePassword" type="button">
+                <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <!-- 👇 Forgot Password Link -->
+        <div class="forgot-password-link">
+            <button mat-button color="warn" (click)="goToForgotPassword()">Forgot Password?</button>
+        </div>
+
+        <mat-checkbox formControlName="rememberMe" class="remember-me">Remember Me</mat-checkbox>
+
+        <button mat-raised-button color="primary" class="full-width" (click)="login()" [disabled]="loginForm.invalid">
+            Login
+        </button>
+
+        <button mat-button color="accent" class="full-width" (click)="goToRegister()">
+            Don’t have an account? Register
+        </button>
+    </mat-card>
+</div>

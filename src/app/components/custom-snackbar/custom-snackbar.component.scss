@@ -1,0 +1,46 @@
+/* Global reset for snackbar wrapper and overlay */
+.mat-snack-bar-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.cdk-overlay-pane {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Custom Snackbar Styling */
+.custom-snackbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+    &.success {
+        background-color: #43a047;
+    }
+
+    &.error {
+        background-color: #e53935;
+    }
+
+    .snackbar-icon {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .snackbar-message {
+        flex: 1;
+    }
+}
