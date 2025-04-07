@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ExpenseService {
-  private apiUrl = 'http://localhost:5000/v1/expense';
+  private apiUrl = 'https://wealthwise-backend-6nis.onrender.com/v1/auth';
 
   constructor(private http: HttpClient) {}
 

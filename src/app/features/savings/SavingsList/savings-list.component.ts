@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { SavingService } from '../../../services/savings';
+import { SavingService } from '../../../services/savings.service';
 
 @Component({
   standalone: true,

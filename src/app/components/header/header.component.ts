@@ -23,6 +23,8 @@ import { MatDividerModule } from '@angular/material/divider';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  userName = localStorage.getItem('userName') || '';
+
   @Output() toggleSidebar = new EventEmitter<void>();
 
   constructor(private router: Router) {}

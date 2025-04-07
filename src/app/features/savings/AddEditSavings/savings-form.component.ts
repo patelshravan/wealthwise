@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { SavingService } from '../../../services/savings';
+import { SavingService } from '../../../services/savings.service';
 
 @Component({
   standalone: true,
