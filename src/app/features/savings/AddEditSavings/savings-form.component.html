@@ -1,0 +1,18 @@
+<div class="saving-form-wrapper">
+  <h2>{{ editingId ? "Edit Savings" : "Add Savings" }}</h2>
+
+  <div *ngIf="loading">
+    <p>Loading savings...</p>
+  </div>
+
+  <form *ngIf="!loading" [formGroup]="savingForm" (ngSubmit)="submit()">
+    <label>Amount:</label>
+    <input formControlName="amount" type="text" />
+
+    <label>Note:</label>
+    <input formControlName="note" type="text" />
+
+    <button type="submit">{{ editingId ? "Update" : "Add" }}</button>
+    <button type="button" (click)="cancel()">Cancel</button>
+  </form>
+</div>

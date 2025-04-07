@@ -1,38 +1,42 @@
-<div class="header">
-    <h2>LIC Policies</h2>
-    <button (click)="goToAdd()">Add Policy</button>
+<div class="page-container">
+    <div class="card-wrapper">
+        <div class="header">
+            <h2>All LIC Policies</h2>
+            <button (click)="goToAdd()">Add Policy</button>
+        </div>
+
+        <table *ngIf="policies.length > 0">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>User Name</th>
+                    <th>User Email</th>
+                    <th>Policy Number</th>
+                    <th>Policy Name</th>
+                    <th>Premium Amount</th>
+                    <th>Due Date</th>
+                    <th>Maturity Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let inv of policies; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ inv.userId?.name }}</td>
+                    <td>{{ inv.userId?.email }}</td>
+                    <td>{{ inv.policyNumber }}</td>
+                    <td>{{ inv.policyName }}</td>
+                    <td>{{ inv.premiumAmount }}</td>
+                    <td>{{ inv.dueDate | date }}</td>
+                    <td>{{ inv.maturityDate | date }}</td>
+                    <td>
+                        <button (click)="edit(inv._id)">Edit</button>
+                        <button (click)="delete(inv._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p *ngIf="policies.length === 0">No policies found.</p>
+    </div>
 </div>
-
-<table *ngIf="policies.length > 0">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>User Name</th>
-            <th>User Email</th>
-            <th>Policy Number</th>
-            <th>Policy Name</th>
-            <th>Premium Amount</th>
-            <th>Due Date</th>
-            <th>Maturity Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let inv of policies; let i = index">
-            <td>{{ i + 1 }}</td>
-            <td>{{ inv.userId?.name }}</td>
-            <td>{{ inv.userId?.email}}</td>
-            <td>{{ inv.policyNumber }}</td>
-            <td>{{ inv.policyNumber }}</td>
-            <td>{{ inv.premiumAmount }}</td>
-            <td>{{ inv.dueDate| date }}</td>
-            <td>{{ inv.maturityDate | date }}</td>
-            <td>
-                <button (click)="edit(inv._id)">Edit</button>
-                <button (click)="delete(inv._id)">Delete</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<p *ngIf="policies.length === 0">No policies found.</p>

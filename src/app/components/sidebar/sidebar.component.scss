@@ -11,16 +11,32 @@
         nav span {
             display: none;
         }
+
+        .logo span {
+            display: none;
+        }
+
+        .logo img {
+            height: 40px;
+        }
     }
 
     .logo {
         display: flex;
         align-items: center;
         gap: 10px;
-        padding: 16px;
+        padding: 20px 16px;
 
         img {
-            height: 32px;
+            height: 48px;
+            transition: height 0.2s ease;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            transition: font-size 0.2s ease;
         }
     }
 

@@ -1,11 +1,13 @@
 <div class="dashboard-wrapper">
-    <mat-grid-list cols="2" rowHeight="150px" gutterSize="24px">
-        <mat-grid-tile *ngFor="let card of summaryCards">
-            <mat-card class="summary-card">
+    <div class="dashboard-container">
+        <h2 class="welcome-message">Stats Overview</h2>
+
+        <div class="card-grid">
+            <mat-card class="summary-card" *ngFor="let card of summaryCards">
                 <mat-icon class="summary-icon">{{ card.icon }}</mat-icon>
                 <h3>{{ card.title }}</h3>
                 <p>{{ card.value | currency: 'INR' }}</p>
             </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+        </div>
+    </div>
 </div>

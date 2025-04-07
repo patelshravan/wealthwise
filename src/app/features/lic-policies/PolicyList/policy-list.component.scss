@@ -1,3 +1,19 @@
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.card-wrapper {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    margin-top: 1rem;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -5,7 +21,7 @@
     margin-bottom: 1.5rem;
 
     h2 {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 600;
         color: #333;
     }
@@ -30,7 +46,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
     overflow: hidden;
 
@@ -52,28 +67,32 @@ table {
         background-color: #f9f9f9;
     }
 
-    td:last-child button {
-        margin-right: 6px;
-        padding: 4px 10px;
-        font-size: 13px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        color: white;
+    td:last-child {
+        white-space: nowrap;
 
-        &:first-child {
-            background-color: #007bff;
+        button {
+            margin-right: 6px;
+            padding: 4px 10px;
+            font-size: 13px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
 
-            &:hover {
-                background-color: #0056b3;
+            &:first-child {
+                background-color: #007bff;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
             }
-        }
 
-        &:last-child {
-            background-color: #dc3545;
+            &:last-child {
+                background-color: #dc3545;
 
-            &:hover {
-                background-color: #b02a37;
+                &:hover {
+                    background-color: #b02a37;
+                }
             }
         }
     }

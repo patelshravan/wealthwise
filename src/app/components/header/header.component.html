@@ -1,16 +1,15 @@
-<mat-toolbar color="primary" class="header-toolbar">
+<mat-toolbar class="header-toolbar">
     <button mat-icon-button (click)="onToggle()">
         <mat-icon>menu</mat-icon>
     </button>
-    <h2 class="welcome-message">Welcome {{ userName }} 👋</h2>
 
     <span class="spacer"></span>
 
-    <!-- User Profile Dropdown -->
-    <button mat-button [matMenuTriggerFor]="userMenu" class="user-menu-btn">
-        <mat-icon>account_circle</mat-icon>
+    <div class="profile-wrapper" [matMenuTriggerFor]="userMenu">
+        <img src="assets/profile.png" alt="Avatar" class="avatar" />
         <span class="username">Shravan</span>
-    </button>
+        <mat-icon class="dropdown-icon">expand_more</mat-icon>
+    </div>
 
     <mat-menu #userMenu="matMenu">
         <button mat-menu-item>
@@ -21,6 +20,7 @@
             <mat-icon>settings</mat-icon>
             <span>Settings</span>
         </button>
+        <mat-divider></mat-divider>
         <button mat-menu-item (click)="logout()">
             <mat-icon>logout</mat-icon>
             <span>Logout</span>

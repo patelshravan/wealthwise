@@ -1,0 +1,38 @@
+<div class="page-container">
+  <div class="card-wrapper">
+    <div class="header">
+      <h2>All Savings</h2>
+      <button class="add-button" (click)="goToAdd()">Add Saving</button>
+    </div>
+
+    <table *ngIf="savings.length > 0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>User Name</th>
+          <th>User Email</th>
+          <th>Amount</th>
+          <th>Note</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let inv of savings; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ inv.userId?.name }}</td>
+          <td>{{ inv.userId?.email }}</td>
+          <td>{{ inv.amount }}</td>
+          <td>{{ inv.note }}</td>
+          <td>{{ inv.date | date : "dd MMM yyyy, h:mm a" }}</td>
+          <td>
+            <button (click)="edit(inv._id)">Edit</button>
+            <button (click)="delete(inv._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="savings.length === 0">No savings found.</p>
+  </div>
+</div>

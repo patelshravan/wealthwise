@@ -1,28 +1,52 @@
 .header-toolbar {
+    background: linear-gradient(to right, #6a85b6, #bac8e0);
+    color: #fff;
+    height: 64px;
     display: flex;
-    justify-content: space-between;
-    padding: 0 16px;
-
-    .logo-icon {
-        height: 28px;
-        margin-right: 6px;
-    }
-
-    .logo-text {
-        font-weight: 600;
-        font-size: 20px;
-    }
+    align-items: center;
+    padding: 0 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
     .spacer {
         flex: 1;
     }
 
-    .user-menu-btn {
-        text-transform: none;
+    button {
         color: #fff;
+    }
+
+    .profile-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 6px 14px;
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            margin-right: 10px;
+        }
 
         .username {
+            font-weight: 500;
+            font-size: 15px;
+            color: #1c2f21;
+        }
+
+        .dropdown-icon {
+            font-size: 20px;
             margin-left: 6px;
+            color: #fff;
         }
     }
 }

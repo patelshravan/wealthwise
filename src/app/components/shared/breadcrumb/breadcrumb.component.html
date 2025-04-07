@@ -1,0 +1,13 @@
+<div class="breadcrumb-card">
+    <nav class="breadcrumb">
+        <ng-container *ngFor="let crumb of breadcrumbs; let i = index">
+            <ng-container *ngIf="i < breadcrumbs.length - 1">
+                <a [routerLink]="crumb.url">{{ crumb.label }}</a>
+                <span class="separator">›</span>
+            </ng-container>
+            <ng-container *ngIf="i === breadcrumbs.length - 1">
+                <span class="active">{{ crumb.label }}</span>
+            </ng-container>
+        </ng-container>
+    </nav>
+</div>
